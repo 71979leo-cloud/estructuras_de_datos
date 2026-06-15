@@ -1,12 +1,8 @@
-from estructuras.lineales.lista_enlazada_simple import LinkedList
-
+from menus.menu_lista import MenuListaEnlazada
 
 def main():
-    lista = LinkedList()
-    lista.insert_at_beggining(10)
-    lista.insert_at_beggining(20)  
-    lista.insert_at_beggining(30)
-    lista.print_linked_list()
-
+    menu = MenuListaEnlazada()
+    menu.iniciar()
+   
 if __name__ == "__main__":
     main()
