@@ -10,7 +10,9 @@ class MenuListaEnlazada(object):
         print("2. Agregar final")
         print("3. Buscar")
         print("4. Mostrar lista")
-        print("5. Salir")
+        print("5. Eliminar el primero")
+        print("6. Eliminar el último")
+        print("7. Salir")
 
     def ejecutar_opcion(self, opcion):
         if opcion == 1:
@@ -32,6 +34,12 @@ class MenuListaEnlazada(object):
             print("Contenido de la lista enlazada:")
             self.lista_enlazada.print_linked_list()
         elif opcion == 5:
+            self.lista_enlazada.delete_at_beginning()
+            print("Primer elemento eliminado de la lista.")
+        elif opcion == 6:
+            self.lista_enlazada.delete_at_end()
+            print("Último elemento eliminado de la lista.")
+        elif opcion == 7:
             print("Saliendo del menú.")
         else:
             print("Opción no válida. Por favor, intente nuevamente.")
@@ -41,7 +49,7 @@ class MenuListaEnlazada(object):
             self.mostrar_menu()
             try:
                 opcion = int(input("Seleccione una opción: "))
-                if opcion == 5:
+                if opcion == 7:
                     self.ejecutar_opcion(opcion)
                     break
                 self.ejecutar_opcion(opcion)
